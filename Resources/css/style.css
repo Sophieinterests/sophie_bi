@@ -1,0 +1,197 @@
+/* Universal Styles */
+
+html {
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    width: 100%;
+}
+
+h1 {
+    color: #FFF;
+    font-size: 4rem;
+    padding: 14rem;
+    width: 20%;
+    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
+    text-align: center;
+}
+
+h2 {
+    border-top: 1px solid #947a57;
+    border-bottom: 1px solid #947a57;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 24px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-family:"Exo 2", sans-serif; /* Added sans-serif as fallback */
+}
+
+p {
+    color: rgba(240, 248, 255, 0.745);
+    line-height: 1.3em;
+    text-align: left;
+    width: 100%;
+    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
+    font-size: 18px;
+    font-weight: 100;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #755337, #d8be97);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+img {
+    width: auto;
+    border-radius: 10px;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none !important;
+    color: #FFF;
+    text-transform: rgb(186, 83, 20);
+
+}
+/*navigation bar*/
+.navbar_container{
+    position: fixed;
+    width: 100%;
+    background-color: #623817;
+    padding: 20px 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navbar {
+    width: 100%;
+    z-index: 10;
+    background-color: #623817;
+}
+
+.subheadings {
+    text-align: center;
+    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration: none !important;
+    border: none;
+    padding-right: 15px;
+}
+.aboutme_navbar{
+    margin-right: 2rem;
+    padding-right: 1.5rem;
+    border-right: 1px solid #FFF;
+    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/*header*/
+header{
+    background-image: url('../images/newtown_icecream.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-repeat: no-repeat; 
+    background-position: right top;
+    border-radius: 10px;
+}
+
+/*about me*/
+#aboutme_background{
+    background-color: #7a5030;
+    margin: 10px;
+    min-height: 320px;
+    border-radius: 10px;
+}
+#aboutme {
+    display:flex;
+    flex-direction: column;
+}
+
+.about_me_content {
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center; 
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.self_intro {
+    display: flex;
+    margin:20px 30px 20px 20px;
+    font-size: 24px;
+    padding:10px;
+}
+
+#portrait {
+    margin: 20px; 
+    max-height: 300px;
+    min-height:250px;
+    
+}
+
+/*artworks*/
+
+.paintings {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.image_painting {
+    flex: 0 1 calc(25% - 20px); /* Adjust the percentage and margin as needed */
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.image_painting img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for enlargement */
+}
+
+.image_painting:hover {
+    z-index: 1; /* Ensures the enlarged image appears above others */
+}
+
+.image_painting:hover img {
+    transform: scale(1.5);
+}
+
+/*substack*/
+
+#substack_post_links {
+    display: block;
+    margin-bottom: 15px; /* Adds space between posts */
+    padding: 10px;
+    background-color: #7a5030; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+.substack_post_links:hover {
+    background-color: #e9e9e9; 
+}
+
+.substack_link{
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+    font-size: 24px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.substack_link:hover {
+    color: #0066cc;
+}
