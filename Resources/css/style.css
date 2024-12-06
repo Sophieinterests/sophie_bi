@@ -94,6 +94,17 @@ a{
     font-weight: 100;
 }
 
+.navbar li a {
+    font-family: "Exo 2", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.subheadings {
+    margin-right: 2rem;
+    padding-right: 1.5rem;
+    border-right: 1px solid #FFF;
+}
 /*header*/
 header{
     background-image: url('../images/newtown_icecream.jpeg');
@@ -127,6 +138,8 @@ header{
 .self_intro {
     display: flex;
     margin:20px 30px 20px 20px;
+    /*font-weight: bold;    /* or */
+    font-weight: 400; 
     font-size: 24px;
     padding:10px;
 }
@@ -152,6 +165,8 @@ header{
     margin: 10px;
     text-align: center;
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    
+    
 }
 
 .image_painting img {
@@ -166,32 +181,109 @@ header{
 }
 
 .image_painting:hover img {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 /*substack*/
+#substack {
+    padding: 20px;
+}
 
-#substack_post_links {
-    display: block;
-    margin-bottom: 15px; /* Adds space between posts */
+.substack_container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
     padding: 10px;
-    background-color: #7a5030; 
+}
+
+.substack_post_links { /* Changed from ID to class */
+    flex: 1;
+    background-color: #966844;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-
-}
-.substack_post_links:hover {
-    background-color: #e9e9e9; 
+    padding: 8px 10px;
+    color: white;
+    text-align: center;
 }
 
-.substack_link{
+.substack_link {
     text-align: center;
     font-family: "Exo 2", sans-serif;
     font-size: 24px;
     padding: 1rem;
-    width: 100%;
+    line-height: 1.2; 
 }
 
-.substack_link:hover {
+.substack_link a {
+    color: white;
+    text-decoration: none;
+}
+
+.substack_link a:hover {
     color: #0066cc;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.popup-content h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+.popup-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.connect-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.connect-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.connect-button:hover {
+    background-color: #e0e0e0;
+}
+
+.icon {
+    font-size: 24px;
 }
