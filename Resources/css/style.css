@@ -20,7 +20,7 @@ h2 {
     border-top: 1px solid #947a57;
     border-bottom: 1px solid #947a57;
     color: #FFF;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 26px;
     line-height: 24px;
     padding-top: 2rem;
@@ -40,9 +40,15 @@ p {
 }
 
 body {
-    background-image: linear-gradient(to bottom right, #755337, #d8be97);
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), url('../images/sky.jpeg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;  /* This makes it stay in place */
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
+    min-height: 100vh;
+    position: relative;
 }
 
 img {
@@ -60,7 +66,28 @@ a{
     text-transform: rgb(186, 83, 20);
 
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.footer-nav_container{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #623817;
+    padding: 10px 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-nav{
+    width: 100%;
+    z-index: 1;
+    background-color: #623817;
+}
 /*navigation bar*/
+
 .navbar_container{
     position: fixed;
     width: 100%;
@@ -221,6 +248,46 @@ header{
 }
 
 .substack_link a:hover {
+    color: #0066cc;
+}
+
+/*project*/
+#projects{
+    padding: 20px;
+}
+
+.project_container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 10px;
+}
+
+.project_links { /* Changed from ID to class */
+    flex: 1;
+    background-color: #966844;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: white;
+    text-align: center;
+}
+
+.project_link {
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+    font-size: 24px;
+    padding: 1rem;
+    line-height: 1.2; 
+}
+
+.project_link a {
+    color: white;
+    text-decoration: none;
+}
+
+.project_link a:hover {
     color: #0066cc;
 }
 
