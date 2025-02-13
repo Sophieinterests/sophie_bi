@@ -1,358 +1,161 @@
 /* Universal Styles */
-
 html {
-    font-family: "Exo 2", sans-serif;
     font-size: 16px;
-    font-weight: 200;
-    width: 100%;
+    font-family: "Exo 2", sans-serif;
 }
 
+/* General Text */
 h1 {
-    color: #FFF;
-    font-size: 4rem;
-    padding: 14rem;
-    width: 20%;
-    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
+    font-size: 3.5rem;
+    padding: 5rem;
+    width: 80%;
     text-align: center;
 }
 
 h2 {
-    border-top: 1px solid #947a57;
-    border-bottom: 1px solid #947a57;
-    color: #FFF;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 24px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    text-align: center;
-    font-family:"Exo 2", sans-serif; /* Added sans-serif as fallback */
+    font-size: 2rem;
+    padding: 1.5rem;
 }
 
 p {
-    color: rgba(240, 248, 255, 0.745);
-    line-height: 1.3em;
-    text-align: left;
-    width: 100%;
-    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
-    font-size: 18px;
-    font-weight: 100;
+    font-size: 1rem;
+    width: 90%;
+    line-height: 1.5;
 }
 
-body {
-    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), url('../images/sky.jpeg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;  /* This makes it stay in place */
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-    min-height: 100vh;
-    position: relative;
-}
-
+/* Images */
 img {
-    width: auto;
-    border-radius: 10px;
-}
-li{
-    list-style: none;
-    display: inline-block;
+    max-width: 100%;
+    height: auto;
 }
 
-a{
-    text-decoration: none !important;
-    color: #FFF;
-    text-transform: rgb(186, 83, 20);
-
-}
-html, body {
-    height: 100%;
-    margin: 0;
-}
-.footer-nav_container{
-    position: relative;
-    width: 100%;
-    height: 30px;
-    background-color: #623817;
-    padding: 10px 10px;
-    bottom: 0;
-    left: 0;
-    right: 0;
+/* Background Image */
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.footer-nav{
-    width: 100%;
-    z-index: 1;
-    background-color: #623817;
-}
-/*navigation bar*/
-
-.navbar_container{
+/* === NAVIGATION MENU === */
+.navbar_container {
     position: fixed;
     width: 100%;
-    background-color: #623817;
     padding: 20px 10px;
-    top: 0;
-    left: 0;
-    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .navbar {
-    width: 100%;
-    z-index: 10;
-    background-color: #623817;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.subheadings {
-    text-align: center;
-    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
-    font-size: 18px;
-    font-weight: 100;
-    text-decoration: none !important;
-    border: none;
-    padding-right: 15px;
-}
-.aboutme_navbar{
-    margin-right: 2rem;
-    padding-right: 1.5rem;
-    border-right: 1px solid #FFF;
-    font-family: "Exo 2", sans-serif; /* Added sans-serif as fallback */
-    font-size: 18px;
-    font-weight: 100;
+.navbar li {
+    display: inline-block;
+    padding: 10px 15px;
 }
 
-.navbar li a {
-    font-family: "Exo 2", sans-serif;
-    font-size: 18px;
-    font-weight: 100;
+/* Stack menu items on small screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar li {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
 }
 
-.subheadings {
-    margin-right: 2rem;
-    padding-right: 1.5rem;
-    border-right: 1px solid #FFF;
-}
-/*header*/
-header{
-    background-image: url('../images/newtown_icecream.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    background-repeat: no-repeat; 
-    background-position: right top;
-    border-radius: 10px;
-}
-
-/*about me*/
-#aboutme_background{
-    background-color: #7a5030;
-    margin: 10px;
-    min-height: 320px;
-    border-radius: 10px;
-}
-#aboutme {
-    display:flex;
-    flex-direction: column;
-}
-
+/* === FLEXIBLE SECTIONS === */
 .about_me_content {
     display: flex;
-    flex-direction: row-reverse; 
-    align-items: center; 
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .self_intro {
-    display: flex;
-    margin:20px 30px 20px 20px;
-    /*font-weight: bold;    /* or */
-    font-weight: 400; 
-    font-size: 24px;
-    padding:10px;
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 
-#portrait {
-    margin: 20px; 
-    max-height: 300px;
-    min-height:250px;
-    
-}
-
-/*artworks*/
-
+/* === ARTWORK GALLERY === */
 .paintings {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts automatically */
+    gap: 20px;
 }
 
 .image_painting {
-    flex: 0 1 calc(25% - 20px); /* Adjust the percentage and margin as needed */
-    margin: 10px;
     text-align: center;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    
-    
-}
-
-.image_painting img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth transition for enlargement */
-}
-
-.image_painting:hover {
-    z-index: 1; /* Ensures the enlarged image appears above others */
+    transition: transform 0.3s ease;
 }
 
 .image_painting:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
-/*substack*/
-#substack {
-    padding: 20px;
-}
-
-.substack_container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    padding: 10px;
-}
-
-.substack_post_links { /* Changed from ID to class */
-    flex: 1;
-    background-color: #eee5d6;
-    border-radius: 10px;
-    padding: 8px 10px;
-    color: #623817;
-    text-align: center;
-}
-
-.substack_link {
-    text-align: center;
-    font-family: "Exo 2", sans-serif;
-    font-size: 24px;
-    padding: 1rem;
-    line-height: 1.2; 
-    font-weight: 300;
-}
-
-.substack_link a {
-    color: #623817;
-    text-decoration: none;
-}
-
-.substack_link a:hover {
-    color: #0066cc;
-}
-
-/*project*/
-#projects{
-    padding: 20px;
-}
-
+/* === PROJECTS & SUBSTACK SECTIONS === */
+.substack_container,
 .project_container {
-    width: 80%;
-    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    gap: 100px;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
-.project_links { /* Changed from ID to class */
+.substack_post_links,
+.project_links {
     flex: 1;
-    background-color: #eee5d6;
-    border-radius: 5px;
-    padding: 8px 10px;
-    color: white;
-    text-align: center;
-}
-
-.project_link {
-    text-align: center;
-    font-family: "Exo 2", sans-serif;
-    font-size: 24px;
-    padding: 1rem;
-    line-height: 1.2; 
-    font-weight: 300;
-}
-
-.project_link a {
-    color: #623817;
-    text-decoration: none;
-}
-
-.project_link a:hover {
-    color: #0066cc;
-}
-
-/* Popup styles */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-.popup-content h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}
-.popup-content {
-    position: relative;
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    width: 70%;
+    min-width: 300px;
     max-width: 500px;
+    background-color: #eee5d6;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.connect-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.connect-button {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     padding: 15px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
+    text-align: center;
 }
 
-.connect-button:hover {
-    background-color: #e0e0e0;
+/* === Pop up === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        padding: 3rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+
+    /* Substack & projects */
+    .substack_container,
+    .project_container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.icon {
-    font-size: 24px;
+/* === FOR MOBILE PHONES) === */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+        padding: 2rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .self_intro {
+        font-size: 1.2rem;
+    }
+
+    /* Reduce padding & margins */
+    .substack_post_links,
+    .project_links {
+        width: 90%;
+    }
 }
