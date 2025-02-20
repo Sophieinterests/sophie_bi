@@ -20,8 +20,8 @@ h2 {
     border-top: 1px solid #947a57;
     border-bottom: 1px solid #947a57;
     color: #FFF;
-    font-weight: 500;
-    font-size: 26px;
+    font-weight: 555;
+    font-size: 31px;
     line-height: 24px;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -40,7 +40,7 @@ p {
 }
 
 body {
-    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), url('../images/sky.jpeg'); 
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.3)), url('../images/sky.jpeg');  
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -49,6 +49,7 @@ body {
     padding-bottom: 2rem;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
 }
 
 img {
@@ -76,12 +77,9 @@ html, body {
 .footer-nav_container {
     position: relative;
     width: 100%;
-    height: 30px;
+    height: 2.5rem;
     background-color: #623817;
-    padding: 10px 10px;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    padding: 10px 20px;
 }
 
 .footer-nav {
@@ -146,7 +144,7 @@ header {
     width: 100%;
     background-repeat: no-repeat; 
     background-position: right top;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 /* About Me */
@@ -214,9 +212,6 @@ header {
 }
 
 /* Substack */
-#substack {
-    padding: 20px;
-}
 
 .substack_container {
     width: 80%;
@@ -240,7 +235,7 @@ header {
     text-align: center;
     font-family: "Exo 2", sans-serif;
     font-size: 24px;
-    padding: 1rem;
+    padding: 1rem 1rem;
     line-height: 1.2; 
     font-weight: 300;
 }
@@ -255,35 +250,25 @@ header {
 }
 
 /* Projects */
-#projects {
-    padding: 20px;
-}
 
 .project_container {
     width: 80%;
     margin: 0 auto;
-    display: flex;
+    display: center;
     flex-direction: row;
-    gap: 100px;
-    padding: 10px;
+    gap: 1rem;
+    padding: 1rem;
 }
-
-.project_links {
-    flex: 1;
-    background-color: #eee5d6;
-    border-radius: 5px;
-    padding: 8px 10px;
-    color: white;
-    text-align: center;
-}
-
 .project_link {
     text-align: center;
     font-family: "Exo 2", sans-serif;
     font-size: 24px;
-    padding: 1rem;
     line-height: 1.2; 
     font-weight: 300;
+    flex: 1;
+    background-color: #eee5d6;
+    border-radius: 5px;
+    padding: 2.5rem 0rem;
 }
 
 .project_link a {
@@ -296,6 +281,7 @@ header {
 }
 
 /* Popup */
+
 .popup {
     display: none;
     position: fixed;
