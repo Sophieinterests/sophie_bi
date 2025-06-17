@@ -1,0 +1,271 @@
+/* Reset and Base Styles */
+html {
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    width: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.3)), url('../images/sky.jpeg');  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+img {
+    width: auto;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* Typography */
+h1, h2, h3, p {
+    color: #FFF;
+    font-family: "Exo 2", sans-serif;
+    text-align: left;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 4rem;
+    margin: 2rem 2 1rem 4rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-style: oblique;
+    margin: 0 0 14rem 14rem;
+    width: 40%;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.745);
+    line-height: 1.3em;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 2 0 1rem 4rem;
+    width: 70%;
+}
+
+/* Navigation */
+.navbar_container {
+    position: fixed;
+    width: 100%;
+    background-color: #623817;
+    padding: 20px 20px; /* Increased horizontal padding for more space */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    overflow-x: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    /* flexisational: wrap; */
+    margin: 0;
+    padding: 2;
+}
+
+.navbar li {
+    display: inline-block;
+    list-style: none;
+}
+
+.subheadings, .aboutme_navbar, .Connect {
+    font-size: 18px;
+    font-weight: 100;
+    margin-right: 2rem; /* Reduced further to minimize width */
+    padding-right: 0.75rem; /* Reduced further to minimize width */
+    border-right: 1px solid #FFF;
+}
+
+.connect-trigger {
+    display: inline-block; /* Ensure consistent display behavior */
+}
+
+/* Layout Components */
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 4rem;
+}
+
+.flex-container img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Header */
+#monster_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#monster_header h1 {
+    padding: 0;
+    width: auto;
+}
+
+#monster_words_web_index img {
+    height: 350px;
+    width: auto;
+}
+
+/* Image + Text Sections */
+.image-text-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 4rem;
+    padding: 0 4rem;
+}
+
+.image-text-section img {
+    height: 30rem;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.image-text-section .text-content {
+    flex: 1;
+}
+
+.image-text-section.right-image {
+    flex-direction: row-reverse;
+}
+
+/* Specific Sections */
+#monster_purpose_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#general_monster_description {
+    width: 60%;
+    margin: 0;
+}
+
+#bee {
+    order: 2;
+    margin-left: auto;
+    mix-blend-mode: multiply;
+}
+
+#bee img {
+    height: 10rem;
+}
+
+/* Consistent Image + Text Sections */
+/* Common styles for both containers */
+#monster_phone_container,
+#file_org {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 4rem;
+    padding: 0 4rem;
+}
+
+/* RIGHT-aligned image section */
+#monster_phone_container {
+    flex-direction: row-reverse;
+    /* Alternative if reverse isn't working: */
+    /* justify-content: space-between; */
+}
+
+/* LEFT-aligned image section (default) */
+#file_org {
+    flex-direction: row; /* This is default, can be omitted */
+}
+
+/* Image sizing - add !important if needed to override other styles */
+#monster_phone_container .image img,
+#file_org .image img {
+    height: 30rem !important;
+    width: auto !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* Layout Components */
+#monster_phone_container {
+    display: flex;
+    flex-direction: row; /* Image on the left, text on the right */
+    align-items: flex-start; /* Align items to the top */
+    gap: 2rem; /* Space between text and image */
+    margin: 4rem;
+    padding: 0 4rem;
+}
+
+.text-content {
+    flex: 1; /* Allow text content to take available space */
+}
+
+#monster_phone img {
+    height: 30rem;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+/* Remove redundant or conflicting rules */
+#monster_phone_container p {
+    margin: 0; /* Ensure no margins interfere */
+    width: 100%; /* Ensure full width */
+    color: rgba(255, 255, 255, 0.745);
+    line-height: 1.5;
+}
+/* Image Styling */
+#monster_phone,
+#fil_org_screenshot {
+    flex-shrink: 0;
+    width: auto;
+}
+
+#monster_phone img,
+#fil_org_screenshot img {
+    height: 30rem; /* Consistent height */
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Text Content */
+#file_org_description {
+    margin: 0 0 1rem 0;
+    color: #FFF;
+    font-size: 1.9rem;
+}
+
+#monster_phone_container p,
+#file_org p {
+    width: 100%;
+    margin: 0 ;
+    color: rgba(255, 255, 255, 0.745);
+    line-height: 1.5;
+}

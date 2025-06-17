@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monster Words</title>
+    <link rel="stylesheet" href="Resources/css/monsters.css">
+    <link rel="images" href="Resources/images/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- This is the Navigation Bar -->
+    <div class="navbar_container">
+        <ul class="navbar">
+            <li class="aboutme_navbar"><a href="#aboutme">About Me</a></li>
+            <li class="subheadings"><a href="#artworks">My Artworks</a></li>
+            <li class="Connect"><a href="#" class="connect-trigger">Connect</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- This is the Header -->
+    <header id="monster_header">
+            <h1>Monster Words Demo</h1> 
+            <div class="image" id="monster_words_web_index">
+                <a href="https://monsters-lueu.onrender.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="Resources/images/monster_words_web_index.jpg" alt="pink screen with selections of types of words" height="350">
+                </a>
+                <p>Click the image to visit the real site</p>
+            </div>
+    
+    </header>
+    <div class="image-text-section" id="monster_purpose_container">
+        <div class="text-content">
+            <h2 class="monster_about">A quick and easy practice tool for kids 8-10 who are working on multisyllabic spelling.</h2>
+            <p id="general_monster_description">Monster Words is an innovative web application designed to support young learners in mastering the spelling 
+            of multisyllabic words through an engaging and interactive platform. 
+            By integrating text-to-speech technology, the application provides auditory reinforcement, 
+            enabling children to hear words pronounced clearly, which enhances their spelling practice and phonetic understanding.</p>
+        </div>
+        <div id="bee" class="image">
+            <img src="Resources/images/beeTwo.jpg" alt="cute bee">
+        </div>
+    </div>
+
+    <!-- iPhone Section -->
+    <div id="monster_phone_container">
+        <div class="text-content">
+            <h2 id="monster_phone_description">iPhone Display</h2>
+            <p>Monster Words is a Python/Flask app using Google Cloud Text-to-Speech (with budget-limited quality) to generate audio for multisyllabic words. 
+            It's responsive, child-friendly front-end (HTML/CSS) ensures accessibility across devices. 
+            Deployed on Render for scalability, it serves educators, parents, and students efficiently.</p>
+        </div>
+        <div class="image" id="monster_phone">
+            <img src="Resources/images/monster_words_phone.jpg" alt="App on iPhone">
+        </div>
+    </div>
+
+    <!-- File Organization Section -->
+    <div id="file_org">
+        <div class="image" id="fil_org_screenshot">
+            <img src="Resources/images/file_organisation.jpg" alt="File structure">
+        </div>
+        <div class="text-content">
+            <h2 id="file_org_description">File Organisation System</h2>
+            <p>The file organisation of the "Monster Words" project is structured with clarity and efficiency, facilitating ease of navigation and maintenance. 
+            The repository is divided into key directories: app/ houses Python scripts including __init__.py, main.py, and multisyllabic.py for the Flask application logic;
+             static/ contains images/ and style.css for interface assets; and templates/ stores audio files exam.mp3 and test.mp3 for text-to-speech output. 
+             Supporting files README.md and requirements.txt reside at the root level, providing documentation and dependency details. 
+             Unnecessary files such as __pycache__ and .DS_Store are excluded, ensuring a concise and focused structure.</p>
+        </div>
+    </div>
+    <div class="image-text-section right-image" id="main_py">
+        <div class="image" id="main_py_screenshot""><img src="Resources/images/main_py.jpg" alt="screenshot of main python file" height="400rem" ></div>
+        <div class="text-content">
+        <h2>Main Python File</h2>
+            <p>The code for "Monster Words" is developed with a focus on readability and maintainability, featuring clear and concise comments to guide other developers. 
+            Each significant function or block is annotated to explain its purpose, with emphasis on the "why" behind critical decisions, such as optimisation choices or API integration logic. </p>
+        </div>
+        </div>
+</body>
+</html>

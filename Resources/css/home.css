@@ -11,6 +11,7 @@ h1 {
     color: #FFF;
     font-size: 4rem;
     padding: 14rem;
+    padding-bottom: 2rem;
     width: 20%;
     font-family: "Exo 2", sans-serif;
     text-align: center;
@@ -29,6 +30,16 @@ h2 {
     font-family: "Exo 2", sans-serif;
 }
 
+h3{
+    color: #FFF;
+    font-size: 1.5rem;
+    padding-left: 14rem;
+    padding-bottom: 14rem;
+    width: 40%;
+    font-family: "Exo 2", sans-serif;
+    text-align: left;
+    font-style: oblique;
+}
 p {
     color: rgba(240, 248, 255, 0.745);
     line-height: 1.3em;
@@ -40,7 +51,7 @@ p {
 }
 
 body {
-    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.3)), url('../images/sky.jpeg');  
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3)), url('../images/sky.jpeg');  
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -137,8 +148,19 @@ html, body {
 }
 
 /* Header */
-header {
+
+#index_header {
     background-image: url('../images/newtown_icecream.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-repeat: no-repeat; 
+    background-position: right top;
+    border-radius: 0;
+}
+
+#monster_header{
+    /* background-color: #8d9aec; */
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -250,6 +272,13 @@ header {
 }
 
 /* Projects */
+/* Monster Words Demo Specific */
+#monster_words_web_index {
+    display: flex; /* or flex depending on your layout */
+    margin-left: 40px; /* space between heading and image */
+    width: 400rem; /* or specific width */
+    height: auto; /* or specific height to match heading size */
+}
 
 .project_container {
     width: 80%;
@@ -347,3 +376,19 @@ header {
 .icon {
     font-size: 24px;
 }
+
+.monster_header {
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+}
+
+/* Monster Words Demo Specific */
+#monster_words_web_index {
+    /* margin-left: 40rem; space between heading and image */
+    display: flex; /* or inline-block */
+    vertical-align: middle; /* aligns with text baseline */
+    margin-bottom: 20rem;
+}
+
+
