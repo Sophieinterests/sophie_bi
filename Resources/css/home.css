@@ -40,6 +40,11 @@ h3{
     text-align: left;
     font-style: oblique;
 }
+
+h4{
+    font-size: 2rem;
+    
+}
 p {
     color: rgba(240, 248, 255, 0.745);
     line-height: 1.3em;
@@ -392,3 +397,49 @@ html, body {
 }
 
 
+/* cards */
+.project_container {
+    display: flex; /* Or use 'display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));' for a grid layout */
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Space between cards */
+    margin: 20px 0;
+}
+
+.project-card {
+    display: block; /* Makes the anchor behave like a block element */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from parent */
+    background-color: #ffffff; /* White background; adjust to match your theme */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Prevent content overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+    width: 400px; /* Fixed width; adjust for responsiveness */
+    height:650px;
+    max-width: 100%; /* Ensure it fits smaller screens */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.card-content {
+    padding: 15px; /* Inner spacing */
+    text-align: center; /* Center text */
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 1.5em;
+    color: #666; /* Subdued color for description */
+    text-align: center;
+}
+
+.card-image {
+    width: 100%; /* Full width within card */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
