@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandma's Voice – Accent-Aware Speech-to-Text</title>
+    <link rel="stylesheet" href="Resources/css/therapact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar_container">
+        <ul class="navbar">
+            <li class="aboutme_navbar"><a href="index.html#aboutme">About Me</a></li>
+            <li class="subheadings"><a href="index.html#artworks">My Artworks</a></li>
+            <li class="Connect"><a href="index.html" class="connect-trigger">Connect</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header id="therapact_header">
+        <h1>Grandma's Voice – Accent-Aware Speech-to-Text</h1>
+        <p class="subtitle">Off-the-shelf voice-to-text kept mishearing my grandparents' Wendeng-accented Mandarin. So I built a pipeline that collects their speech and fine-tunes a Whisper model to understand them.</p>
+        <!-- TODO: replace href with the Hugging Face Space / model URL -->
+        <p class="cta-row"><a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer" class="cta-button">Try it on Hugging Face →</a></p>
+    </header>
+
+    <!-- Pipeline overview -->
+    <section id="pipeline">
+        <ol class="pipeline-steps">
+            <li><span class="step-num">1</span>Generate reading prompt<small>Claude API</small></li>
+            <li><span class="step-num">2</span>Record grandma reading<small>Browser recorder</small></li>
+            <li><span class="step-num">3</span>Check &amp; correct transcript<small>Human in the loop</small></li>
+            <li><span class="step-num">4</span>Store audio + text pairs<small>Google Drive &amp; Sheets</small></li>
+            <li><span class="step-num">5</span>Fine-tune Whisper<small>LoRA on Hugging Face</small></li>
+        </ol>
+    </section>
+
+    <!-- Demo Content -->
+    <section id="ux-demo">
+        <div class="demo-container">
+
+            <div class="demo-card">
+                <div class="demo-description">
+                    <h3>The Problem</h3>
+                    <p><strong>Speech models are trained on "standard" accents</strong><br>
+                    My grandparents speak Mandarin with a strong Wendeng (Shandong) accent. Generic speech-to-text tools return garbled transcripts, which makes voice messages, search and assistants frustrating for exactly the people who benefit most from not having to type.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-description">
+                    <h3>Step 1: Prompts Grandma Enjoys Reading</h3>
+                    <p><strong>Claude API</strong> <em>Topic-based text generation</em><br>
+                    Grandma picks a topic (问候语 greetings, 养生 health, 感悟 reflections, 故事 stories, 回忆 memories) and the app generates an 80–150 character passage in warm, everyday language with no rare characters. It reads like a WeChat morning greeting, so recording sessions feel like a chat rather than a chore.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-description">
+                    <h3>Step 2: Elder-Friendly Recorder</h3>
+                    <p><strong>Design principle:</strong> <em>Big buttons, one action at a time</em><br>
+                    The interface is entirely in Chinese with three large controls: 换一段 (new passage), 开始录音 (start), 停止录音 (stop). A session counter shows progress so we can see the dataset grow.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-description">
+                    <h3>Step 3: Human-in-the-Loop Labels</h3>
+                    <p><strong>Data quality</strong> <em>Transcript matches what was actually said</em><br>
+                    The generated text pre-fills the transcript, and I edit it wherever grandma skipped, added or changed words. Every audio clip is paired with an accurate label, which matters a lot when the dataset is small.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-description">
+                    <h3>Step 4: Dataset Storage</h3>
+                    <p><strong>Node / Express + Google APIs</strong><br>
+                    On upload, the audio goes to a Google Drive folder and a row (timestamp, filename, transcript, Drive link, file size) is added to a Google Sheet. The sheet then becomes the training manifest.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-description">
+                    <h3>Step 5: Fine-Tuning Whisper</h3>
+                    <p><strong>Whisper-medium + LoRA (PEFT)</strong> <em>Efficient training on a small dataset</em><br>
+                    Rather than retraining the whole model, I use LoRA adapters (r=32) on the attention projections, trained with Hugging Face's Seq2SeqTrainer on grandma's audio/transcript pairs. This adapts Whisper to her accent without needing thousands of hours of data.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-nav_container">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html" class="connect-trigger">← Back to Portfolio</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>

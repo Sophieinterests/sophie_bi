@@ -145,3 +145,58 @@ a {
     #therapact_header h1 { font-size: 2rem; }
     .demo-container { padding: 0 15px; }
 }
+/* Accent pipeline demo */
+.cta-row {
+    margin-top: 24px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #623817;
+    color: #FFF;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #7a5030;
+}
+
+.pipeline-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.pipeline-steps li {
+    list-style: none;
+    flex: 1 1 160px;
+    background: #eee5d6;
+    color: #623817;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.pipeline-steps small {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: #7a5030;
+}
+
+.step-num {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #947a57;
+}
